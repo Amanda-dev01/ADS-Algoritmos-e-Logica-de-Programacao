@@ -26,6 +26,40 @@ void media_3_notas(){
 	printf("Media: %d", media);
 }
 
+void maior_numero(){
+	float num1, num2, maiornum;
+	printf("<<Maior Numero>>\n\n");
+	printf("Informe o primeiro numero: ");
+	scanf("%f", &num1);
+	printf("Informe o segundo numero: ");
+	scanf("%f", &num2);
+	maiornum = num1;
+	if (num2 > maiornum){
+		maiornum = num2;
+	}
+	if (num1 > maiornum){
+		maiornum = num1;
+	}
+	printf("O maior numero eh: %.2f\n", maiornum);
+}
+
+void menor_numero(){
+	float num1, num2, menornum;
+	printf("<<Menor Numero>>\n\n");
+	printf("Informe o primeiro numero: ");
+	scanf("%f", &num1);
+	printf("Informe o segundo numero: ");
+	scanf("%f", &num2);
+	menornum = num1;
+	if (num2 < menornum){
+		menornum = num2;
+	}
+	if (num1 < menornum){
+		menornum = num1;
+	}
+	printf("O menor numero eh: %.2f\n", menornum);
+}
+
 void menu(){
 	int op = 1;
 	while(op != 5){
@@ -35,7 +69,7 @@ void menu(){
 		printf("\n2 - Media 3 notas");		
 		printf("\n3 - Maior Numero");
 		printf("\n4 - Menor Numero");
-		printf("\n5 - Sair");
+		printf("\n5 - Sair\n");
 		printf("\nInforme a opcao: ");
 		scanf("%d", &op);
 		
@@ -47,8 +81,10 @@ void menu(){
 				media_3_notas();
 				break;
 			case 3:
+				maior_numero();
 				break;
 			case 4:
+				menor_numero();
 				break;
 			case 5:
 				printf("\nFim!!");
